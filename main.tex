@@ -1,0 +1,126 @@
+%
+%                       This is a basic LeTeX Template
+%                       for the Informatics Research Review
+
+\documentclass[a4paper,11pt]{article}
+% Add local fullpage and head macros
+\usepackage{head,fullpage}     
+% Add graphicx package with pdf flag (must use pdflatex)
+\usepackage[pdftex]{graphicx}  
+% Better support for URLs
+\usepackage{url}
+% Date formating
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+
+\parindent=0pt          %  Switch off indent of paragraphs 
+\parskip=5pt            %  Put 5pt between each paragraph  
+\Urlmuskip=0mu plus 1mu %  Better line breaks for URLs
+
+
+%                       This section generates a title page
+%                       Edit only the following three lines
+%                       providing your name & matric. no, 
+%                       the general field of study you are considering
+%                       for your review, and name of IRR tutor
+
+\newcommand{\name}{Firstname Lastname (s123456789)}
+\newcommand{\field}{Whatever I Write About}
+\newcommand{\supervisor}{My IRR Tutor}
+
+\begin{document}
+\begin{minipage}[b]{110mm}
+        {\Huge\bf School of Informatics
+        \vspace*{17mm}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{40mm}               
+        \makebox[40mm]{
+        \includegraphics[width=40mm]{crest.png}}
+\end{minipage}
+\par\noindent
+    % Centre Title, and name
+\vspace*{2cm}
+\begin{center}
+        \Large\bf Informatics Research Review \\
+        \Large\bf \field
+\end{center}
+\vspace*{1.5cm}
+\begin{center}
+        \bf \name\\
+        \monthyeardate\today
+\end{center}
+\vspace*{5mm}
+
+%
+%                       Insert your abstract HERE
+%                       
+\begin{abstract}
+        The abstract is a short concise outline of your 
+        project area, {\bf of no more than 100 words}.
+\end{abstract}
+
+\vspace*{1cm}
+
+\vspace*{3cm}
+Signature:\hspace*{8cm}Date:
+
+\vfill
+{\bf Supervisor:} \supervisor
+\newpage
+
+%                                               Through page and setup 
+%                                               fancy headings
+\setcounter{page}{1}                            % Set page number to 1
+\footruleheight{1pt}
+\headruleheight{1pt}
+\lfoot{\small School of Informatics}
+\lhead{Informatics Research Review}
+\rhead{- \thepage}
+\cfoot{}
+\rfoot{Date: \date{\today}}
+%
+\tableofcontents                                % Makes Table of Contents
+
+\section{Introduction}
+
+This template can be used as a starting point for your \textbf{Informatics Research Review}. The template is based on \cite{template}.
+
+A literature review is an objective, critical summary of published research literature relevant to a topic under consideration for research. Its purpose is to create familiarity with current thinking and research on a particular topic, and may justify future research into a previously overlooked or understudied area.
+
+A typical literature review consists of the following components:
+
+\begin{enumerate}
+    \item A concise definition of a topic under consideration (this may be a descriptive or argumentative thesis, or proposal), as well as the scope of the related literature being investigated. (Example: If the topic under consideration is `women's wartime diaries', the scope of the review may be limited to published or unpublished works, works in English, works from a particular location, time period, or conflict, etc.)
+    \item The introduction should also note intentional exclusions. (Example: ``This review will not explore the diaries of adolescent girls'')
+    \item Another purpose of the introduction is to state the general findings of the review (what do most of the sources conclude), and comment on the availability of sources in the subject area.
+\end{enumerate}
+
+\section{Literature Review}
+
+\begin{enumerate}
+    \item There are many ways to organize the evaluation of the sources. Chronological and thematic approaches are each useful examples.
+    \item Each work should be critically summarized and evaluated for its premise, methodology, and conclusion. It is as important to address inconsistencies, omissions, and errors, as it is to identify accuracy, depth, and relevance.
+    \item Use logical connections and transitions to connect sources.
+\end{enumerate}
+
+\section{Summary \& Conclusion}
+
+\begin{enumerate}
+    \item The conclusion summarizes the key findings of the review in general terms. Notable commonalities between works, whether favourable or not, may be included here.
+    \item This section is the reviewer’s opportunity to justify a research proposal. Therefore, the idea should be clearly re-stated and supported according to the findings of the review.
+\end{enumerate}
+
+
+%                Now build the reference list
+\bibliographystyle{unsrt}   % The reference style
+%                This is plain and unsorted, so in the order
+%                they appear in the document.
+
+
+\bibliography{main}       % bib file(s).
+
+\end{document}
+
