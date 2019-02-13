@@ -1,5 +1,5 @@
 %
-%                       This is a basic LeTeX Template
+%                       This is a basic LaTeX Template
 %                       for the Informatics Research Review
 
 \documentclass[a4paper,11pt]{article}
@@ -22,11 +22,11 @@
 
 %                       This section generates a title page
 %                       Edit only the following three lines
-%                       providing your name & matric. no, 
+%                       providing your exam number, 
 %                       the general field of study you are considering
 %                       for your review, and name of IRR tutor
 
-\newcommand{\name}{Firstname Lastname (s123456789)}
+\newcommand{\examnumber}{123456789}
 \newcommand{\field}{Whatever I Write About}
 \newcommand{\supervisor}{My IRR Tutor}
 
@@ -49,7 +49,7 @@
 \end{center}
 \vspace*{1.5cm}
 \begin{center}
-        \bf \name\\
+        \bf \examnumber\\
         \monthyeardate\today
 \end{center}
 \vspace*{5mm}
@@ -65,7 +65,7 @@
 \vspace*{1cm}
 
 \vspace*{3cm}
-Signature:\hspace*{8cm}Date:
+Date: \today
 
 \vfill
 {\bf Supervisor:} \supervisor
@@ -120,6 +120,7 @@ A typical literature review consists of the following components:
 %                they appear in the document.
 
 
+\small
 \bibliography{main}       % bib file(s).
 
 \end{document}
